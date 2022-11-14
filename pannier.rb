@@ -2,6 +2,8 @@ class Pannier
 
     MAX_CARGO_ITEMS = 10
 
+    attr_accessor :cargo_contents
+
     def initialize()
         @cargo_contents = []
     end

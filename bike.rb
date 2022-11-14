@@ -1,10 +1,12 @@
 # Bike
+require_relative 'pannier'
 
 class Bike
 
   STANDARD_WEIGHT = 200 # lbs
 
-  attr_accessor :id, :color, :price, :weight, :rented, :cargo_contents
+  attr_accessor :id, :color, :price, :weight, :rented, :pannier
+  
 
   def initialize(id, color, price, weight = STANDARD_WEIGHT, rented = false)
     @id = id
@@ -12,7 +14,7 @@ class Bike
     @price = price
     @weight = weight
     @rented = rented
-    pannier = Pannier.new()
+    @pannier = Pannier.new()
   end
 
   def rent!
